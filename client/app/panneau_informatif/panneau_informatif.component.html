@@ -1,0 +1,24 @@
+<div id="panneau" *ngFor="let joueur of tableauJoueurs" [ngClass]="{'caseSurlignee': joueurQuiEstASonTour === joueur.name}">
+      <div id="affichageNom">
+        <h3>Nom: </h3> <h3>{{joueur.name}}</h3>
+      </div>
+      <br/>
+      <div id="affichageScore">
+        <h3>Score: </h3>  <h3>{{joueur.score}}</h3>
+      </div>
+      <br/>
+      <div id="affichageNbrLettres" *ngIf="joueur.nbLettreChevalet < 7">
+          <h3>Lettres chevalet: </h3>   <h3>{{joueur.nbLettreChevalet}}</h3>
+      </div>
+      <br/>
+   </div>
+    
+    <div id="chronometreEtReserve">
+    <div id="chronometre">
+      <h3>Temps restant: </h3>
+      <countdown-timer-element [estASonTour]="estASonTour"></countdown-timer-element>
+    </div>
+    <div id="affichageNbrLettresReserve">
+          <h3>Lettres reserve: {{nbrLettresReserve}}</h3> 
+     </div>
+     </div>

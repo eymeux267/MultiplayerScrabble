@@ -1,0 +1,57 @@
+<div id="chevalet">
+      <table id="tableauChevalet">
+      <td *ngFor="let lettre of lettres" class="lettreChevalet"> 
+      <div id="caractereLettre"> {{lettre.getLettre()}} </div>
+      <div id="valeurPointsLettre"> {{lettre.getValeurPoints()}} </div>
+      </td>
+      </table>
+   </div>
+  <div>
+  <div id="sousBlocPlateau">
+    <td id="identificationVerticale" *ngFor= "let row of plateau, let i = index">
+        {{i + 1}}
+    </td>
+
+    <table class="grille">
+    <tr *ngFor= "let row of plateau; let i = index">
+      <td *ngFor= "let cell of plateau; let j = index">
+      <div class = "sansBonus" *ngIf="plateau[i][j].getBonus() === null && plateau[i][j].getLettre() === null" [ngClass]="{'etoile': i===7 && j===7}">
+      </div>
+      <div class = "sansBonus" *ngIf="plateau[i][j].getBonus() !== null && plateau[i][j].getLettre() !== null && plateau[i][j].getLettre().getLettre() !== null" [ngClass]="{'etoile': i===7 && j===7}">
+      {{plateau[i][j].getLettre().getLettre()}}
+      </div>
+      <div class = "bonusMotx2" *ngIf="plateau[i][j].getBonus() !== null && plateau[i][j].getLettre() !== null && plateau[i][j].getLettre().getLettre() === null
+            && plateau[i][j].getBonus().getBonusMot() === true && plateau[i][j].getBonus().getValeurBonus() === 2">
+        <label> MOT x2 </label>
+      </div>
+    <div class = "sansBonus" *ngIf="plateau[i][j].getBonus() === null && plateau[i][j].getLettre()!==null" [ngClass]="{'etoile': i===7 && j===7 && plateau[i][j].getLettre().getLettre() === null }">
+      {{plateau[i][j].getLettre().getLettre()}}
+      </div>
+       <div class = "bonusMotx3" *ngIf="plateau[i][j].getBonus() !== null && plateau[i][j].getLettre() !== null && plateau[i][j].getLettre().getLettre() === null
+            && plateau[i][j].getBonus().getBonusMot() === true && plateau[i][j].getBonus().getValeurBonus() === 3">
+        <label> MOT x3 </label>
+      </div>
+
+        <div class = "bonusLettrex2" *ngIf="plateau[i][j].getBonus() !== null && plateau[i][j].getLettre() !== null && plateau[i][j].getLettre().getLettre() === null
+            && plateau[i][j].getBonus().getBonusMot() === false && plateau[i][j].getBonus().getValeurBonus() === 2">
+        <label> LETTRE </label> <label class="labelMultiplication"> x2 </label>
+        </div>
+
+        <div class = "bonusLettrex3" *ngIf="plateau[i][j].getBonus() !== null  && plateau[i][j].getLettre() !== null && plateau[i][j].getLettre().getLettre() === null
+            && plateau[i][j].getBonus().getBonusMot() === false && plateau[i][j].getBonus().getValeurBonus() === 3">
+       <label> LETTRE </label> <label class="labelMultiplication"> x3 </label>
+      </div>
+
+      </td>
+    </tr>
+  </table>
+
+  </div>
+
+  <div id="identificationLignes">
+  <tr *ngFor= "let row of identificationLignes">
+    <td id="identificationHorizontale">{{row}}</td>
+  </tr>
+
+   </div>
+   </div>

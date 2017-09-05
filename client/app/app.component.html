@@ -1,0 +1,17 @@
+<div id="app">
+<entrez-nom (sendName)= "getName($event)"  ></entrez-nom>
+<button (click)="nouvellePartie()" id="boutonRetour" *ngIf="partieFinie"> Retourner Menu principal </button>
+<div *ngIf="nomConfirmer">
+  <type-partie (confirmGameType)= "onConfirm($event)" *ngIf="!partieCommencee"> </type-partie>
+  <div id="jeuScrabble" *ngIf="partieCommencee">
+    <chevalet-jeu id="chevalet" (tabEstAppuye)="gererTabDeChevalet()"></chevalet-jeu>
+    <div id="panneauEtPlateauEtBoite">
+      <panneau-informatif id="panneau" [nbrDeJoueurs]="nbrDeJoueurs" [estASonTour]="estASonTour"
+            [joueurQuiEstASonTour]="joueurQuiEstASonTour"></panneau-informatif>
+      <plateau-de-jeu id="plateau"></plateau-de-jeu>
+      <boite-de-communication id="boite"
+              (tabEstAppuye)="gererTabDeBoite()"></boite-de-communication>
+    </div>
+  </div>
+  </div>
+  </div>

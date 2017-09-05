@@ -1,0 +1,79 @@
+.labelMultiplication{
+       font-size: 160%;
+   }
+   #identificationHorizontale{
+    height: 46px;
+    text-align:center;
+   }
+   #identificationLignes{
+    top:20px;
+    position: relative;
+    left: 10px;
+   }
+   #sousBlocPlateau{
+    position: absolute;
+    left: 50px;
+   }
+   #identificationVerticale{
+    width: 46px;
+    text-align:center;
+   }
+  .grille {
+    width: 545px;
+    border: 3px solid black;
+    border-collapse: collapse;
+  }
+  .sansBonus{
+    text-align: center;
+    background-color: #C4BDA1;
+    border: 1px solid black;
+    width: 42px;
+    height: 42px;
+    color: black;
+  }
+  .bonusMotx2{
+    text-align: center;
+    background-color: #DBABA1;
+    border: 1px solid black;
+    width: 42px;
+    height: 42px;
+    color: black;
+  }
+    .bonusMotx3{
+    text-align: center;
+    background-color: #E76C5C;
+    border: 1px solid black;
+    width: 42px;
+    height: 42px;
+    color: black;
+  }
+    .bonusLettrex2{
+    text-align: center;
+    font-size: 65%;
+    background-color: #ABBEBC;
+    border: 1px solid black;
+    width: 42px;
+    height: 42px;
+    color: black;
+  }
+    .bonusLettrex3{
+    text-align: center;
+    font-size: 65%;
+    background-color: #5DBCD2;
+    border: 1px solid black;
+    width: 42px;
+    height: 42px;
+    color: black;
+  }
+   #caractereLettre{
+    font-size: 180%;
+    font-weight: bold;
+   }
+   #valeurPointsLettre{
+     text-align: right;
+     font-size: 120%;
+   }
+   .etoile{
+     background-image: url("app/images/scrabblestar.jpg");
+     background-size: contain;
+   }

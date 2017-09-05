@@ -1,0 +1,42 @@
+  #app{  position:fixed;
+  height: 100%;
+  width: 67%;
+  }
+  #boite{
+    position: absolute;
+    left: 1375px;
+  }
+
+  #chevalet{
+    position: relative;
+    top: 5%;
+    left: 48%;
+  }
+
+  #panneauEtPlateauEtBoite{
+    position: relative;
+    top: 3%;
+    left: 3%;
+    width: 100%;
+  }
+  #plateau{
+    position: absolute;
+    top: 10px;
+    left: 500px;
+  }
+  #panneau{
+    position: absolute;
+    top: 60px;
+  }
+
+  #boutonRetour{
+      font-size:25px;
+      border:none;
+      margin: 0px 10px;
+      border-radius:3px;
+      box-shadow:0 3px 0 #0eb2c1;
+      background: #5DBCD2;
+      cursor: pointer;
+      position: absolute;
+      left: 100px;
+  }

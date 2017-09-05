@@ -1,0 +1,9 @@
+<div id="leChevalet" (keydown)="gererTouchesClavier($event.key)" tabindex="0" >
+    <table id="tableauChevalet">
+    <td *ngFor="let lettre of lettres; let i = index" class="lettreChevalet"
+                               [ngClass]="{'caracteresEnRouge':posLettreChoisie === i}"> 
+    <div id="caractereLettre"> {{lettre.getLettre()}} </div>
+    <div id="valeurPointsLettre"> {{lettre.getValeurPoints()}} </div>
+    </td>
+    </table>
+  </div>

@@ -1,0 +1,59 @@
+ #boiteCommunication{
+      position:relative;
+      width:20%;
+      height:800px;
+  }
+  #logs{
+      border: 1px solid black;
+      width:460px;
+      height: 600px;
+      background:#C4BDA1;
+      padding:10px;
+      overflow-y:scroll;
+      overflow-x:hide;
+  }
+  #message{
+     display:inline;
+     color:blue;
+  }
+  #commande{
+     display:inline;
+     color:red;
+  }
+  #nomUsager{
+    display:inline;
+  }
+  #chat{
+    margin-bottom:7px;
+  }
+  #logs::-webkit-scrollbar{
+      width:10px;
+  }
+  #logs::-webkit-scrollbar-thumb{
+      border-radius:5px;
+      background: #595959;
+  }
+  #textarea{
+      width:330px;
+      height:100px;
+      background:#fbfbfb;
+      resize:none;
+      padding:5px;
+      position:relative;
+      left: 3%;
+  }
+  textarea:focus{
+      background:#fff;
+  }
+  #boutonEnvoyer{
+      font-size:25px;
+      border:none;
+      margin: 0px 10px;
+      border-radius:3px;
+      box-shadow:0 3px 0 #0eb2c1;
+      background: #5DBCD2;
+      cursor: pointer;
+      bottom:50px;
+      right:15px;
+      position: absolute;
+  }

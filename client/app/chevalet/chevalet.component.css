@@ -1,0 +1,25 @@
+ .caracteresEnRouge{
+    color: darkred;
+  }
+   #tableauChevalet{
+    border: 3px solid black;
+    border-collapse: collapse;   
+    width: 500px;
+    height: 25px; 
+    position: relative;
+    left: 8%;
+   }
+   .lettreChevalet{
+    background-color: #C4BDA1;
+    border: 1px solid black;
+    width: 71px;
+    cursor: pointer;
+   }
+   #caractereLettre{
+    font-size: 180%;
+    font-weight: bold;
+   }
+   #valeurPointsLettre{
+     text-align: right;
+     font-size: 120%;
+   }

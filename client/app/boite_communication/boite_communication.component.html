@@ -1,0 +1,17 @@
+<div id="app">
+ <div id="boiteCommunication" >
+
+    <div id="logs">
+      <div id="chat" *ngFor = "let message of messages">
+      <p id="nomUsager">  {{message.name}}: </p>
+      <p id="message" *ngIf = "!message.estCommande"> {{message.text}} </p>
+      <p id="commande" *ngIf = "message.estCommande"> {{message.text}} </p>
+        </div>
+    </div>
+    <br>
+    <input id = "textarea" placeholder = "Ecrire message ici..." #textbox type= "text" [(ngModel)] = "textMessage"
+                     (keydown.Tab)="gererTouchesClavier($event)">
+    <button (click) = "envoyer(); textMessage = null" tabindex="-1">Send message</button>
+    
+</div>
+  </div>

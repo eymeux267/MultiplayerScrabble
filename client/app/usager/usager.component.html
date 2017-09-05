@@ -1,0 +1,22 @@
+<div class="huge" *ngIf= "confirmed == false">
+<div class="form" >
+  <div class="forceColor"></div>
+  <div class="topbar">
+    <input  #textbox type="text" class="input" id="password" placeholder="Votre nom"/>
+  </div>
+  <button (click) = "confirmer(textbox.value)" class="submit" id="submit" >Confimer Nom</button>
+</div>
+</div>
+
+<div class="huge" *ngIf="confirmed == true && this.isValid == false">
+<div class="form" >
+  <div class="forceColor"></div>
+  <div class="topbar">
+    <div class="spanColor"></div>
+    <input  #textbox type="text" class="input" id="password" placeholder="Non indisponible"/>
+  </div>
+  <button (click) = "confirmer(textbox.value)" class="submit" id="submit" >Réessayer</button>
+</div>
+</div>
+
+
